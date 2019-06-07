@@ -59,7 +59,7 @@ func normalStringProcessor(tokenValue string) (el Element, e error) {
 						out = append(out, rune(v))
 					}
 				} else {
-					e = MakeErrorWithFormat(ErrParserError, "Invalid escape character: %s", ch)
+					e = MakeErrorWithFormat(ErrParserError, "Invalid escape character: %#U", ch)
 				}
 			} else {
 				e = MakeError(ErrParserError, "Escape character found at end of string.")
